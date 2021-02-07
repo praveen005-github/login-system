@@ -1,39 +1,43 @@
-import './App.css';
-import Login from './cmp/Login'
-import Home from './cmp/Home'
-import Signup from './cmp/Signup'
-import Protected from './cmp/Protected'
-import LoginSuccess from './cmp/LoginSuccess'
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
+import React from 'react'
+import './App.css'
+import { BrowserRouter as Router, Switch, Route,/* Link*/ } from "react-router-dom"
+import Home from './component/Home'
+import Login from './component/Login'
+import Protected from './component/Protected'
+import Nav from './component/Nav'
+import Register from './component/Register'
+import LogOut from './component/LogOut'
+
 
 function App() {
   return (
     <div className="App">
       <Router>
-        
-        <Link to ="login"> Login </Link>
-        <Link to ="signup"> Signup </Link>
-        <Link to ='/'>Home</Link>
-        
+
+        {/*<LogOut />*/}
+        <Nav/>
+
         <Switch>
-          <Route path="/home">
-            <Home />
+          <Route path='/Home'>
+            <Home/>
           </Route>
-          <Route path="/login">
+
+          <Route path='/Register'>
+            <Register />
+          </Route>
+
+          <Route path='/login'>
             <Login />
           </Route>
-          <Route path="/signup">
-            <Signup />
+
+          <Route path='/'>
+            <Login />
           </Route>
+          
         </Switch>
 
       </Router>
-     
+
     </div>
   );
 }

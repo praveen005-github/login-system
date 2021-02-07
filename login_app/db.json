@@ -1,43 +1,18 @@
 {
-  "login": [
+  "Home": [],
+  "userData": [
     {
-      "username": "p",
-      "password": "123",
+      "fullName": "Admin",
+      "email": "admin",
+      "password": "1234",
       "id": 1
     },
     {
-      "username": "sdd",
-      "password": "",
-      "email": "dsds",
+      "fullName": "Praveen",
+      "email": "123@gmail.com",
+      "password": "123",
+      "c_password": "123",
       "id": 2
-    },
-    {
-      "username": "praveen",
-      "password": "123",
-      "id": 3
-    },
-    {
-      "username": "p",
-      "password": "123",
-      "id": 4
-    },
-    {
-      "username": "p",
-      "password": "123",
-      "id": 5
-    },
-    {
-      "username": "p",
-      "password": "123",
-      "id": 6
-    },
-    {
-      "username": "p",
-      "password": "123",
-      "id": 7
     }
-  ],
-  "register": [
-    {}
   ]
 }

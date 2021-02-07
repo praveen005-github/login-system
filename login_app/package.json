@@ -16,7 +16,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "server": "json-server --watch db.json --port 8000"
   },
   "eslintConfig": {
     "extends": [
@@ -38,6 +39,7 @@
   },
   "devDependencies": {
     "favicons-webpack-plugin": "^5.0.0",
+    "json-server": "^0.16.3",
     "webpack-pwa-manifest": "^4.3.0"
   }
 }
