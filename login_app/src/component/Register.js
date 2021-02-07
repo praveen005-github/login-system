@@ -42,9 +42,9 @@ class Register extends Component {
                 {loggedin ? <Redirect to="/Home" /> : null}
                 <br />
                 <input type="text" placeholder="Full Name" onChange={(evt) => {this.setState({fullName: evt.target.value})}} /> <br /> <br /> 
-                <input type="text" placeholder="Email" onChange={(evt) => { this.setState({ email: evt.target.value }) }} /> <br /> <br />
-                <input type="text" placeholder="Password" onChange={(evt) => { this.setState({ password: evt.target.value }) }} /> <br /> <br />
-                <input type="text" placeholder="Confirm Password" onChange={(evt) => { this.setState({ c_password: evt.target.value }) }} /> <br /> <br /> 
+                <input type="email" placeholder="Email" onChange={(evt) => { this.setState({ email: evt.target.value }) }} /> <br /> <br />
+                <input type="password" placeholder="Password" onChange={(evt) => { this.setState({ password: evt.target.value }) }} /> <br /> <br />
+                <input type="password" placeholder="Confirm Password" onChange={(evt) => { this.setState({ c_password: evt.target.value }) }} /> <br /> <br /> 
                 <button onClick={() => this.register()} > Register </button>
             </div>
         )

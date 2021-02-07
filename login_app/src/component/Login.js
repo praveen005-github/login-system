@@ -35,8 +35,8 @@ class Login extends Component {
                 <br />
                 {loggedin ? <Redirect to="/Home" />:null}
                 <br />
-                <input type="text" placeholder="Email" onChange={(evt) => { this.setState({ email: evt.target.value }) }} /> <br /> <br />
-                <input type="text" placeholder="Password" onChange={(evt) => { this.setState({ password: evt.target.value }) }} /> <br /> <br />
+                <input type="email" placeholder="Email" onChange={(evt) => { this.setState({ email: evt.target.value }) }} /> <br /> <br />
+                <input type="password" placeholder="Password" onChange={(evt) => { this.setState({ password: evt.target.value }) }} /> <br /> <br />
                 <button onClick={() => this.login()} > Login </button>
                 {JSON.parse(localStorage.getItem('login')) ? <Redirect to="/Home" /> : null}
             </div>
