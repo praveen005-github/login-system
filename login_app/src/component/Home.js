@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
+import Dashboard from '../Dashboard/Dashboard'
 
 class Home extends Component {
     render() {
@@ -7,7 +8,8 @@ class Home extends Component {
         return (
             <div>
                 {loggedin?null:<Redirect to='/login'/>}
-                You are Logged In !!
+                Welcome to Home!!
+                <Dashboard/>
             </div>
         );
     }

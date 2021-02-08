@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom"
 import Home from './component/Home'
 import Login from './component/Login'
 import Protected from './component/Protected'
-import Nav from './component/Nav'
+import NavMenu from './component/NavMenu'
 import Register from './component/Register'
 import LogOut from './component/LogOut'
 
@@ -15,14 +15,14 @@ function App() {
       <Router>
 
         {/*<LogOut />*/}
-        <Nav/>
+        <NavMenu/>
 
         <Switch>
-          <Route path='/Home'>
+          <Route path='/home'>
             <Home/>
           </Route>
 
-          <Route path='/Register'>
+          <Route path='/register'>
             <Register />
           </Route>
 
@@ -35,6 +35,7 @@ function App() {
           </Route>
           
         </Switch>
+
 
       </Router>
 
