@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Redirect } from "react-router-dom";
 import Home from './Home'
+import Protected from "./Protected";
 //import Router from 'react-router-dom';
 
 class Login extends Component {
@@ -28,12 +29,11 @@ class Login extends Component {
         })        
     }
     render() {
-        var loggedin = JSON.parse(localStorage.getItem('login'));
         return (
             <div>
                 Login Page
                 <br />
-                {loggedin ? <Redirect to="/Home" />:null}
+                <Protected/>
                 <br />
                 <input type="email" placeholder="Email" onChange={(evt) => { this.setState({ email: evt.target.value }) }} /> <br /> <br />
                 <input type="password" placeholder="Password" onChange={(evt) => { this.setState({ password: evt.target.value }) }} /> <br /> <br />
