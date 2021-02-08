@@ -14,5 +14,24 @@
       "c_password": "123",
       "id": 2
     }
+  ],
+  "list":[
+    {
+      "ProductId":"",
+      "Product Name": "",
+      "Product Description":"",
+      "highest": 0,
+      "category":"",
+      "Image":"",
+      "Minimum Bid Price":"",
+      "Biding Ends":"",
+      "id": 1,
+      "people": [
+        {
+          "email":"",
+          "price":""
+        }
+      ]
+    }
   ]
 }
