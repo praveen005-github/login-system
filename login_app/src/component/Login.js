@@ -1,8 +1,11 @@
 import React, { Component } from "react";
-import { Redirect } from "react-router-dom";
-import Home from './Home'
+import { Redirect, useHistory } from "react-router-dom";
+import Home from './Home';
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+
 import Protected from "./Protected";
 //import Router from 'react-router-dom';
+
 
 class Login extends Component {
     constructor(){
@@ -35,7 +38,7 @@ class Login extends Component {
                 <br />
                 <Protected/>
                 <br />
-                <input type="email" placeholder="Email" onChange={(evt) => { this.setState({ email: evt.target.value }) }} /> <br /> <br />
+                <input type="text" placeholder="Email" onChange={(evt) => { this.setState({ email: evt.target.value }) }} /> <br /> <br />
                 <input type="password" placeholder="Password" onChange={(evt) => { this.setState({ password: evt.target.value }) }} /> <br /> <br />
                 <button onClick={() => this.login()} > Login </button>
                 {JSON.parse(localStorage.getItem('login')) ? <Redirect to="/Home" /> : null}
