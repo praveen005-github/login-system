@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import {Redirect} from 'react-router-dom';
+import Protected from "./Protected";
 
 class Register extends Component {
     constructor(){
@@ -34,12 +35,11 @@ class Register extends Component {
         })
     }
     render() {
-        var loggedin = JSON.parse(localStorage.getItem('login'));
         return (
             <div>
                 Registration Page
                 <br />
-                {loggedin ? <Redirect to="/Home" /> : null}
+                <Protected/>
                 <br />
                 <input type="text" placeholder="Full Name" onChange={(evt) => {this.setState({fullName: evt.target.value})}} /> <br /> <br /> 
                 <input type="email" placeholder="Email" onChange={(evt) => { this.setState({ email: evt.target.value }) }} /> <br /> <br />

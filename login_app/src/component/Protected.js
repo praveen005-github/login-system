@@ -1,11 +1,15 @@
-import React from 'react';
-import {Redirect} from 'react-router-dom';
+import React, { Component } from 'react';
+import { Redirect } from "react-router-dom";
 
-function Protected(props) {
-    const Cmp = props.cmp
-    var auth = JSON.parse(localStorage.getItem('login'))
-    console.log(auth);
-    return <div> { auth? <Cmp/> : <Redirect to='login'></Redirect>} </div>
+class Protected extends Component {
+    render() {
+        var loggedin = JSON.parse(localStorage.getItem('login'));
+        return (
+            <div>
+                {loggedin ? <Redirect to="/Home" /> : null}
+            </div>
+        );
+    }
 }
- 
+
 export default Protected;
