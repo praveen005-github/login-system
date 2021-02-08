@@ -6,7 +6,7 @@ import Login from './component/Login'
 import Protected from './component/Protected'
 import NavMenu from './component/NavMenu'
 import Register from './component/Register'
-import LogOut from './component/LogOut'
+import LogOut from './component/Logout'
 
 
 function App() {

@@ -15,14 +15,18 @@ class Login extends Component {
             password:''
         }
     }
+
+
     login() {
         console.warn("state", this.state)   
         fetch(`http://localhost:8000/userData?q=${this.state.email}&password=${this.state.password}`).then((data) => {
             data.json().then((response)=>{
                 console.warn("response",response)
                 if(response.length>0){
-                    alert('Logged In Successfully')
+                    /*alert('Logged In Successfully')*/
                     localStorage.setItem("login", JSON.stringify(response));
+                    window.location.href='/home'
+                    
                 }
                 else{
                     window.alert('Check email and password!!')

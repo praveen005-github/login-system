@@ -1,19 +1,19 @@
 import React, { Component } from 'react';
 
-function logout() {
-    localStorage.clear();
-    window.location.href = '/';
-}
 
 
-class LogOut extends Component {
+class Logout extends Component {
+    logout() {
+        localStorage.clear();
+        window.location.href = '/';
+    }
     render() {
         return (
             <div>
-                LOGOUT
+                logout();
             </div>
         );
     }
 }
 
-export default LogOut;
+export default Logout;
